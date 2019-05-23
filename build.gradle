@@ -10,7 +10,7 @@ repositories {
 }
 
 group 'io.github.aamersohel.hello'
-version '1.0-SNAPSHOT'
+version '1.0'
 
 sourceCompatibility = 1.8
 
@@ -24,23 +24,20 @@ gradlePlugin {
     }
 }
 
-// The configuration example below shows the minimum required properties
-// configured to publish your plugin to the plugin portal
 pluginBundle {
 
     website = 'https://aamersohel.github.io/'
     vcsUrl = 'https://github.com/aamersohel/hello.git'
-    description = 'Greetings from here!'
-    tags = ['greetings', 'salutations']
+    description = 'Hello world gradle plugin'
+    tags = ['hello-world', 'java']
 
     plugins {
         helloPlugin {
-            // id is captured from java-gradle-plugin configuration
-            displayName = 'Hello plugin'
+            displayName = 'Hello world plugin'
         }
     }
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation 'junit:junit:4.12'
 }
